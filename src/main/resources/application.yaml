@@ -10,10 +10,9 @@ spring:
           enabled: false
         blob:
           enabled: true
-          # This is hardcoded to use Azurite, we should do something smarter if we want to dynamically change with Azure
-          account-name: devstoreaccount1
-          account-key: Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==
-          endpoint: ${AZURE_HOST}:10000/devstoreaccount1
+          account-name: ${AZURE_STORAGE_ACCOUNT_NAME}
+          account-key: ${AZURE_STORAGE_ACCOUNT_KEY}
+          endpoint: ${AZURE_STORAGE_ENDPOINT}
 management:
   server:
     port: 9090
